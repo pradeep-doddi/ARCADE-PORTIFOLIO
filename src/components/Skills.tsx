@@ -6,46 +6,49 @@ import {
   Smartphone, 
   Globe, 
   Wrench, 
-  Palette 
+  Palette,
+  Gamepad2,
+  Brain,
+  Zap
 } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
+      icon: Smartphone,
+      title: 'APP DEVELOPER',
+      color: 'from-retro-cyan to-retro-lime',
+      skills: ['React Native', 'Flutter', 'iOS Development', 'Android Development', 'Cross-Platform']
+    },
+    {
+      icon: Gamepad2,
+      title: 'GAME DEVELOPER',
+      color: 'from-retro-purple to-retro-pink',
+      skills: ['Unity', 'Unreal Engine', 'C#', 'Game Design', 'Physics Engine']
+    },
+    {
+      icon: Brain,
+      title: 'ML ENGINEER',
+      color: 'from-retro-orange to-retro-yellow',
+      skills: ['TensorFlow', 'PyTorch', 'Python', 'Neural Networks', 'Deep Learning']
+    },
+    {
       icon: Code2,
       title: 'FRONTEND',
-      color: 'from-retro-cyan to-retro-lime',
+      color: 'from-retro-pink to-retro-purple',
       skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js']
     },
     {
       icon: Database,
       title: 'BACKEND',
-      color: 'from-retro-purple to-retro-pink',
+      color: 'from-retro-lime to-retro-cyan',
       skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Express']
-    },
-    {
-      icon: Smartphone,
-      title: 'MOBILE',
-      color: 'from-retro-orange to-retro-yellow',
-      skills: ['React Native', 'Flutter', 'iOS', 'Android', 'Ionic']
-    },
-    {
-      icon: Globe,
-      title: 'WEB3',
-      color: 'from-retro-pink to-retro-purple',
-      skills: ['Solidity', 'Web3.js', 'Ethereum', 'IPFS', 'DeFi']
     },
     {
       icon: Wrench,
       title: 'TOOLS',
-      color: 'from-retro-lime to-retro-cyan',
-      skills: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma']
-    },
-    {
-      icon: Palette,
-      title: 'DESIGN',
       color: 'from-retro-yellow to-retro-orange',
-      skills: ['UI/UX', 'Photoshop', 'Blender', 'Pixel Art', 'Animation']
+      skills: ['Git', 'Docker', 'AWS', 'Vercel', 'Firebase']
     }
   ];
 
@@ -122,7 +125,9 @@ const Skills = () => {
               '⚡ Speed Coder',
               '🎮 Game Builder',
               '🚀 Ship Master',
-              '🔥 Bug Slayer'
+              '🔥 Bug Slayer',
+              '🧠 AI Wizard',
+              '📱 App Creator'
             ].map((achievement, index) => (
               <div 
                 key={index}
