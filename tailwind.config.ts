@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Retro game colors
+				retro: {
+					purple: '#6B46C1',
+					pink: '#EC4899',
+					cyan: '#06B6D4',
+					lime: '#65F463',
+					orange: '#F97316',
+					yellow: '#FDE047'
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'pixel': ['"Press Start 2P"', 'monospace'],
+				'retro': ['VT323', 'monospace'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +98,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pixel-float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glitch': {
+					'0%': { transform: 'translate(0)' },
+					'20%': { transform: 'translate(-2px, 2px)' },
+					'40%': { transform: 'translate(-2px, -2px)' },
+					'60%': { transform: 'translate(2px, 2px)' },
+					'80%': { transform: 'translate(2px, -2px)' },
+					'100%': { transform: 'translate(0)' }
+				},
+				'blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pixel-float': 'pixel-float 3s ease-in-out infinite',
+				'glitch': 'glitch 0.3s ease-in-out infinite',
+				'blink': 'blink 1s step-end infinite'
 			}
 		}
 	},
